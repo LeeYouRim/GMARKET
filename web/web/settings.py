@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'gmarket',
     'django_extensions',
     'rest_framework',
+    'xlwt',
 ]
 
 MIDDLEWARE = [

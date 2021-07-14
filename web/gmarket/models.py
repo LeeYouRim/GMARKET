@@ -11,3 +11,6 @@ class GMarket(models.Model):
     sale = models.CharField(max_length=200)
     brand = models.CharField(max_length=200)
     create_at = models.DateTimeField(default=now())
+
+    class Meta:
+        db_table = "gmarket"

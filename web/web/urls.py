@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from gmarket.views import index
+from gmarket.views import excel_export
 from rest_framework import routers
 import gmarket.views
 from django.conf.urls import include
@@ -26,5 +27,6 @@ router.register("items", gmarket.views.GMarketViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('export/', excel_export)
 ]
